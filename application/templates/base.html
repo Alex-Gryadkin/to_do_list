@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>My TODO list</title>
+            <link rel = "stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <h1>YOUR PERSONAL TODO LIST</h1>
+            <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}  <!-- activates CSRF defense-->
+                <p>
+                    {{ form.task_descr(size = 75) }}
+                    {{ form.submit() }}
+                </p>
+           </form>
+        <table id="tasks">
+            <tr>
+                <th>#</th>
+                <th>Task Name</th>
+                <th>Status</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+          {% block content %}{% endblock %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <tr>
+        {% for to_do in to_dos %}
+            <td>{{ to_do.id }}</td>
+            <td>{{ to_do.task_descr }}</td>
+            <td>{{ to_do.status.value }}</td>
+            <td><button class="button button2">Edit</button></td>
+            <td><button class="button button1 ">Delete</button></td>
+    </tr>
+    {% endfor %}
+{% endblock %}
