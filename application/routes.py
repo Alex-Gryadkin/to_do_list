@@ -10,7 +10,7 @@ def index():
     form = NewTask()
     to_dos = Task.query.all()
     if form.validate_on_submit():
-        task = Task(task_descr=form.task_descr.data, status="To Do")
+        task = Task(task_descr=form.task_descr.data, status=1)
         db.session.add(task)
         db.session.commit()
         return redirect(url_for('index'))
