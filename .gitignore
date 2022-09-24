@@ -2,3 +2,7 @@
 /venv
 /__pycache__
 /application/__pycache__
+/applications/migration/__pycache__
+/applications/migrations/versions/__pycache__
+
+
