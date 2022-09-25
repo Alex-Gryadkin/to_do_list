@@ -3,8 +3,8 @@
 {% block content %}
     {% for to_do in to_dos %}
         <tr>
-            <td>{{ to_do.id }}</td>
-            <td>{{ to_do.task_descr }}</td>
+            <td class="table1">{{ to_do.id }}</td>
+            <td class="table2" >{{ to_do.task_descr }}</td>
             <td>
             <a href="/change/{{ to_do.id }}" class="button button2">{{ to_do.status.value }}</a>
             </td>
